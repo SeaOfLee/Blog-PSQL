@@ -14,3 +14,24 @@
  *= require_self
  */
 @import 'bootstrap';
+
+.nav-logo {
+  background-image: url(Hi_Lee.png);
+  width: 300px;
+  height: 45px;
+  background-size: cover;
+}
+
+.navbar {
+  // height: 70px !important;
+  background-color: #ADD8E6;
+}
+
+// styles comment modal box
+#comment_comment_text {
+  width: 100%;
+}
+
+.navbar-btn {
+  float: right;
+}
