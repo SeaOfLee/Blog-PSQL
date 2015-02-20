@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor', group: :production
+
+gem 'figaro'
+
 gem 'bootstrap_form'
 
 gem "paperclip", "~> 4.2"
