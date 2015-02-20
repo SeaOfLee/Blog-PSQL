@@ -27,6 +27,10 @@
   background-color: #ADD8E6;
 }
 
+.navbar-brand {
+  width: 195px;
+}
+
 // styles comment modal box
 #comment_comment_text {
   width: 100%;
@@ -47,4 +51,8 @@
     }
 #post_post_text {
   height: 300px !important;
+}
+
+#comment_comment_text {
+  height: 75px !important;
 }
