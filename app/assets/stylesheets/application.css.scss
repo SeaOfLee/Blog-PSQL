@@ -35,3 +35,16 @@
 .navbar-btn {
   float: right;
 }
+
+.jumbotron {
+  background: url(background.jpg) 50% 0 fixed; 
+  height: auto;  
+  margin: 0 auto; 
+  width: 100%; 
+  position: relative; 
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 200px 0;
+    }
+#post_post_text {
+  height: 300px !important;
+}

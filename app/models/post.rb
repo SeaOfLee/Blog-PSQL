@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  validates :post_text, presence: true
+
   belongs_to :user
   has_many :comments
 

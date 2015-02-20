@@ -1,42 +1,14 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+<%= bootstrap_form_for(@user) do |f| %>
+  <div class='row'>
+    <div class='col-md-6 col-md-offset-3'>
+      <%= bootstrap_form_for(@user) do |f| %>
+      <%= f.email_field :email %>
+      <%= f.text_field :nickname %>
+      <%= f.password_field :password %>
+      <%= f.password_field :password_confirmation %>
+      <%= f.submit "Sign Up" %>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="field">
-        <%= f.label :email %><br>
-        <%= f.text_field :email %>
-      </div>
-      <div class="field">
-        <%= f.label :nickname %><br>
-        <%= f.text_field :nickname %>
-      </div>
-      <div class="field">
-        <%= f.label :avatar %><br>
-        <%= f.file_field :avatar %>
-      </div>
-      <div class="field">
-        <%= f.label :password %><br>
-        <%= f.password_field :password %>
-      </div>
-      <div class="field">
-        <%= f.label :'confirm password' %><br>
-        <%= f.password_field :password_confirmation %>
-      </div>
-      <br>
-      <div class="actions">
-        <%= f.submit %>
-      </div>
-    </div>
   </div>
-  
+</div>
 <% end %>
+

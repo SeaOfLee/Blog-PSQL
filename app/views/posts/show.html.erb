@@ -2,7 +2,7 @@
   <div class="col-md-8 blog_content">
     <strong><h3><%= @post.title %></h3>
     <br></strong> 
-    <p><%= @post.post_text %></p>
+    <p><%= simple_format(@post.post_text) %></p>
     <p><%= image_tag @post.photo.url %></p>
     <%= link_to 'Edit', edit_post_path(@post) %> |
     <%= link_to 'Back', posts_path %>
