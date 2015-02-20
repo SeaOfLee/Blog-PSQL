@@ -14,8 +14,10 @@
  *= require_self
  */
 @import 'bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Lato:700);
 
 $navcolor :#ADD8E6;
+
 
 .nav-logo {
   background-image: url(hi_lee_195x45.png);
@@ -62,4 +64,8 @@ $navcolor :#ADD8E6;
 .footer {
   background-color: $navcolor;
   padding-top: 5px;
+}
+
+.title {
+  font-family: 'Lato', sans-serif;
 }
