@@ -14,12 +14,11 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav nav-pills">
-        <li class="active"><a href="#">Blog</a></li>
+      <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Projects</a></li>
         <li><a href="#">Contact</a></li>
+        <li><%= link_to 'Sign In', new_sessions_path %></li>
       </ul>
-      <button type="button" class="btn btn-default navbar-btn"><a href='sessions/new'>Sign In</a></button>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
   </nav>
