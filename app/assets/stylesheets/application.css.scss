@@ -23,6 +23,16 @@ body {
   padding-bottom: 10px;
 }
 
+#home { 
+  background-image: url(background.jpg) 50% 0 fixed; 
+  height: auto;  
+  margin: 0 auto; 
+  width: 100%; 
+  position: relative; 
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 200px 0;
+}
+
 .nav-logo {
   background-image: url(hi_lee_195x45.png);
   width: 195px;
@@ -47,7 +57,7 @@ body {
   background: url(lee_bg.jpg) 50% 0 fixed; 
   height: auto;  
   margin: 0 auto; 
-  max-width: 1200px;
+  width: 100%;
   background-repeat: no-repeat; 
   position: relative; 
   box-shadow: 0 0 50px rgba(0,0,0,0.8);
