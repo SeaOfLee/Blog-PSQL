@@ -5,10 +5,15 @@
       <%= @post.created_at.strftime("%B %d, %Y") %></em></small>
     <p><%= simple_format(@post.post_text) %></p>
     <br>
-    <% if @post.photo_file_name != 'missing.png' %>
     <p><%= image_tag @post.photo.url %></p>
-    <% end %>
-    <%= link_to 'Edit', edit_post_path(@post) %> |
+    <!-- only shows edit/delete links when admin is logged in -->
+    <% if current_user != nil && current_user.is_admin == true %>
+        <%= link_to ' Edit', edit_post_path(@post) %> 
+        |
+        <%= link_to ' Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+        |
+      <% end %>
+    
     <%= link_to 'Back', posts_path %>
   </div>
 
