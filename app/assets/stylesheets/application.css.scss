@@ -20,6 +20,7 @@ $navcolor :#ADD8E6;
 
 body {
   height: 100%;
+  padding-bottom: 10px;
 }
 
 .nav-logo {
@@ -43,7 +44,7 @@ body {
 }
 
 .jumbotron {
-  background: url(lee_bg.jpg) 80% 0 fixed; 
+  background: url(lee_bg.jpg) 50% 0 fixed; 
   height: auto;  
   margin: 0 auto; 
   width: 100%; 
@@ -59,7 +60,8 @@ body {
   height: 75px !important;
 }
 
-#footer {
+.navbar-bottom {
+  background-color: $navcolor !important;
   width: 100% !important;
   height: 70px !important;
   position: absolute !important;
