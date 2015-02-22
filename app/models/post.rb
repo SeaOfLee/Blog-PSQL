@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   validates :post_text, presence: true
 
   belongs_to :user
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   has_attached_file :photo, :styles => { 
     :original => ['1920x1680>', :jpg],

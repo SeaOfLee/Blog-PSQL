@@ -10,7 +10,7 @@
       <% if current_user != nil && current_user.is_admin == true %>
         |<%= link_to ' Edit', edit_post_path(p) %> 
         |
-        <%= link_to ' Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to ' Delete', post_path(p), method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
     </div>
     <div class="col-md-4 right_nav"></div>

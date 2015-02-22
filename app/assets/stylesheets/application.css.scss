@@ -19,14 +19,7 @@
 $navcolor :#ADD8E6;
 
 body {
-  margin: 0px;
-  padding: 0px;
   height: 100%;
-}
-
-.wrapper {
-  min-height: 100%;
-  position: relative;
 }
 
 .nav-logo {
@@ -50,7 +43,7 @@ body {
 }
 
 .jumbotron {
-  background: url(background.jpg) 50% 0 fixed; 
+  background: url(background.jpg) 80% 0 fixed; 
   height: auto;  
   margin: 0 auto; 
   width: 100%; 
@@ -66,12 +59,13 @@ body {
   height: 75px !important;
 }
 
-.footer .nav .navbar-bottom {
-  width: 100%;
-  padding-top: 5px;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
+#footer {
+  width: 100% !important;
+  height: 70px !important;
+  position: absolute !important;
+  bottom: 0px !important;
+  left: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 .title {

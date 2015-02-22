@@ -10,12 +10,16 @@ class SessionsController < ApplicationController
       # if user is authenticated, creates cookie in browser. Session is a rails specific idea.
       # Cookie only sticks if redirect_to renders a complete page. 
       session["user_id"] = u.id.to_s
-      redirect_to posts_path(user_id: u.id)
+        if u.is_admin?
+          redirect_to user_path(u.id)
+        else
+          redirect_to posts_path
+        end
     end
   end
 
   def destroy
     session.destroy
-    redirect_to new_sessions_path
+    redirect_to posts_path
   end
 end

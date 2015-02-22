@@ -2,9 +2,14 @@
 <div class="row">
     <div class="col-md-8 blog_content">
     <br>
-      <p><%= comment.user.nickname %> said: <%= comment.comment_text %></p>
+      <p><strong><%= comment.user.nickname %></strong> said: <%= comment.comment_text %></p>
       <span class="timestamp"> Posted <%= time_ago_in_words(comment.created_at) %> ago.
-      <%= link_to ' Delete', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+      <!-- if a user is logged in and if current_user is an admin or the user who made comment, comment can be deleted -->
+      <% if current_user !=nil %>
+        <% if current_user.is_admin == true || current_user == comment.user%>
+        <%= link_to ' Delete', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      <% end %>
       </span>
     </div>
     

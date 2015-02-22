@@ -5,31 +5,3 @@
   Pass:&nbsp&nbsp <%= f.password_field :password %><br>
   <%= f.submit "Log In, Yo" %>
 <% end %>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">
-  Log In
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Log In</h4>
-      </div>
-      <div class="modal-body">
-        <%= form_for @user, url:{ :controller => 'sessions', :action => "create"} do |f| %>
-        <div class="comment_modal"><%= f.text_field :email %></div>
-        <div class="comment_modal"><%= f.password_field :password %></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-         <%= f.submit "Log In", class: "btn btn-primary"%>
-         <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-
