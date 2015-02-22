@@ -17,25 +17,6 @@
     <%= yield %>
 </div>
 
-<div class='navbar navbar-bottom'>
-    <div class='container'>
-      <div class='row'>
-        <div class='pull-left'>
-            <% if current_user != nil %>
-            <p class='navbar-text'>Logged in as: <%= current_user.email %>
-            <%= link_to "Log Out", sessions_path, method: :delete %></p>
-            <% end %>
-        </div>
-        <div class='col-md-3 col-md-offset-1 col-sm-4 col-xs-6 pull-right'>
-          <ul class='list-unstyled'>              
-            <li><i class='glyphicon glyphicon-certificate'></i> I Live In Los Angeles, CA</li>
-            <li><i class='glyphicon glyphicon-thumbs-up'></i> 1-808-221-9677</li>
-            <li><i class='glyphicon glyphicon-envelope'></i><a href='mailto:l.richardson1@gmail.com'> l.richardson1@gmail.com</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- Contact Form Modal Body -->
   <div class='modal fade' id='contact' role='dialog'>
     <div class='modal-dialog'>
