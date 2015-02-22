@@ -9,13 +9,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <div class="container">
-    <%= render partial: 'layouts/nav'%>
-    <hr>
-    <br>
-    <%= yield %>
-</div>
+<body>  
+  <%= render partial: 'layouts/nav'%>
+  <hr>
+  <br>
+  <%= yield %>
 
   <!-- Contact Form Modal Body -->
   <div class='modal fade' id='contact' role='dialog'>
