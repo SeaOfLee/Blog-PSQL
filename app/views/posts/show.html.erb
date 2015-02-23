@@ -17,12 +17,16 @@
       
       <%= link_to 'Back', posts_path %>
     </div>
+  </div>
 
-  <%= render @post.comments %>
-  <br>
-  <% if current_user != nil %>
-    <%= render 'comments/form' %>
-  <% else %>
-    <%= link_to 'Sign In to Post a Comment', new_sessions_path %>
-  <% end %>
-</div>
+  <div class="container">
+    <div class='row'>
+      <%= render @post.comments %>
+      <br>
+      <% if current_user != nil %>
+        <%= render 'comments/form' %>
+      <% else %>
+        <%= link_to 'Sign In to Post a Comment', new_sessions_path %>
+      <% end %>
+    </div>
+  </div>
