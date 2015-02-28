@@ -7,4 +7,9 @@ class User < ActiveRecord::Base
   has_secure_password
   has_many :posts
   has_many :comments
+
+  def to_s
+    "This person's email is #{self.email}"
+  end
+  
 end
