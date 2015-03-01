@@ -7,14 +7,14 @@ Rails.application.configure do
   config.cache_classes = false
 
   # paperlcip config
-#   config.paperclip_defaults = {
-#   :storage => :s3,
-#   :s3_credentials => {
-#     :bucket => ENV['S3_BUCKET'],
-#     :access_key_id => ENV['S3_KEY'],
-#     :secret_access_key => ENV['S3_SECRET']
-#   }
-# }
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['S3_BUCKET'],
+    :access_key_id => ENV['S3_KEY'],
+    :secret_access_key => ENV['S3_SECRET']
+  }
+}
 
   # Do not eager load code on boot.
   config.eager_load = false
